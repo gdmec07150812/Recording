@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Recording</string>
+    <string name="title_activity_recprd">RecordActivity</string>
+    <string name="record_title_hint">输入记录标题</string>
+</resources>
