@@ -2,12 +2,10 @@ package com.gdmec.jacky.recording;
 
 import java.util.UUID;
 
-/**
- * Created by jacky on 2017/5/7.
- */
-
 public class Record {
+    //Record项的唯一标识符
     private UUID mId;
+    //Record项的标题
     private String mTitle;
 
     public Record() {

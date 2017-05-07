@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 public class RecordFragment extends Fragment {
     private Record mRecord;
-    private EditText mTileField;
+    private EditText mTitleField;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -21,9 +21,11 @@ public class RecordFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        //新建一个视图
         View v = inflater.inflate(R.layout.fragment_record, container, false);
-        mTileField = (EditText) v.findViewById(R.id.record_title);
-        mTileField.addTextChangedListener(new TextWatcher() {
+        //实例化mTitleField
+        mTitleField = (EditText) v.findViewById(R.id.record_title);
+        mTitleField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -31,6 +33,7 @@ public class RecordFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                //当编辑框的内容发生改变，直接修改mTitle的内容
                 mRecord.setmTitle(s.toString());
             }
 
